@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rclock</title>
+    <link rel="stylesheet" href="Style.css">
+   
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&family=Luxurious+Roman&family=Orbitron&family=Oswald&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="clock-container">
+        <div class="time-container">
+             <div id="time"></div>
+            <div id="am-pm"></div>
+        </div>
+        <div id="date"></div>
+        <div class="controls">
+
+            <input onchange="getalaram(this.value)" type="datetime-local">
+                 <button onclick="setAlaram()" id="setAlarm" >Set Alarm</button>
+                 <button onclick="StopAlarm()" id="StopAlarm">Stop Alarm</button>
+            
+        </div>
+    </div>
+    <div class="alarams">
+        <h1>Upcoming Alarms</h1>
+        <div class="alaram-container "> </div>
+    </div>
+
+    <script src="javasc.js"></script>
+</body>
+</html>
