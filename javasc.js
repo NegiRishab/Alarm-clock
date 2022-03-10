@@ -114,6 +114,7 @@ function createAlarm() {
     newcontainer.appendChild(newsetAlarm);
     newcontainer.appendChild(newbutton);
     // console.log(newcontainer);
+    alert("hey alarm is now set");
 }
 
 
