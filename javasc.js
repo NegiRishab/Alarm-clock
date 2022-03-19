@@ -68,7 +68,10 @@ function setAlaram() {
         const settime = new Date(alaramvalue);
 
         var timeout = settime.getTime() - current.getTime();
-        console.log(current.getTime());
+         if(timeout<0){
+           alert("please select a significant alarm");
+             return;
+       }
 
         alaramout = setTimeout(() => {
             audio.play()
@@ -105,6 +108,7 @@ function createAlarm() {
         let alarm = document.querySelector(`#alarm-${alarmCount}`);
 
         alarm.remove();
+        StopAlarm();
     })
 
 
