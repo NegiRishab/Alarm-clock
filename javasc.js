@@ -117,7 +117,6 @@ function createAlarm() {
 console.log(alarm);
         alarm.remove();
         StopAlarm();
-        console.log(alaramvalue);
     })
 
 
