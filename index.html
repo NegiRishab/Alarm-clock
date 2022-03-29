@@ -6,30 +6,69 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rclock</title>
     <link rel="stylesheet" href="Style.css">
-   
-<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&family=Luxurious+Roman&family=Orbitron&family=Oswald&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&family=Bree+Serif&family=Luxurious+Roman&family=Orbitron&family=Oswald&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/30767010b4.js" crossorigin="anonymous"></script>
+    
 </head>
 <body>
 
+    <!-- (1) this is my clock container where we have current time tracking with current date -->
     <div class="clock-container">
         <div class="time-container">
-             <div id="time"></div>
+            <div id="time"></div>
             <div id="am-pm"></div>
         </div>
+        <!-- (1.1) here we set current date  -->
         <div id="date"></div>
+        <p id="click">click and choose</p>
         <div class="controls">
-
-            <input onchange="getalaram(this.value)" type="datetime-local">
-                 <button onclick="setAlaram()" id="setAlarm" >Set Alarm</button>
+            <!-- (1.2) here we have one input here we set time with that we have to button set and stop alarm  -->
+            <!-- <i class="fas fa-clock"></i> -->
+            <i id="arrow" class="fas fa-long-arrow-alt-right"></i>
+            
+            <input onchange="getalaram(this.value)" type="datetime-local"  >
+            <button onclick="setAlaram()" id="setAlarm" >Set Alarm</button>
                  <button onclick="StopAlarm()" id="StopAlarm">Stop Alarm</button>
             
         </div>
     </div>
+
+    <!-- (2) this contianer for alarms list where we add our new alarm  -->
     <div class="alarams">
         <h1>Upcoming Alarms</h1>
         <div class="alaram-container "> </div>
     </div>
-
+    
+    <!-- (3) custom-alert box for error and time set  -->
+    <div id="custom-alert1">
+        <div class="box">
+            <div class="heading">
+                <h1>ERROR!</h1>
+            </div>
+            <div class="content">
+                <p>Please! select a significant time</p>
+                <button id="confirm" onclick="hide1()">Ok</button>
+            </div>
+        </div>
+    </div>
+    
+    <div id="custom-alert2">
+        <div class="box">
+            <div class="heading">
+                <h1>Congratulation!</h1>
+            </div>
+            <div class="content">
+                <p>Hey! you Alarm is now set</p>
+                <button id="confirm" onclick="hide2()">Ok</button>
+            </div>
+        </div>
+    </div>
+    
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    
     <script src="javasc.js"></script>
 </body>
 </html>
